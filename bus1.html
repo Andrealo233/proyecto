@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Personalizado</title>
+    <!-- Enlace a la hoja de estilos externa -->
+    <link rel="stylesheet" href="bus1.css">
+</head>
+<body>
+
+    <div class="card-form">
+        <h2>Iniciar Sesión / Registro</h2>
+        <form>
+            <!-- Campo Nombre -->
+            <div class="form-group">
+                <label for="name" class="form-label">Nombre</label>
+                <input type="text" class="form-control" name="name" id="name" placeholder="Tu nombre" required>
+                <small id="helpId" class="form-text">Ingresa tu nombre completo</small>
+            </div>
+            
+            <!-- Campo Correo Electrónico -->
+            <div class="form-group">
+                <label for="email" class="form-label email-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="tucorreo@ejemplo.com" required>
+            </div>
+
+            <!-- Campo Contraseña -->
+            <div class="form-group">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="password" placeholder="********" required>
+            </div>
+
+            <!-- Enlace de recuperación -->
+            <div class="form-actions">
+                <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+            </div>
+
+            <!-- Casilla de Términos y Condiciones -->
+            <div class="form-group-checkbox">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">Acepto los <a href="#" class="terms-link">términos y condiciones</a></label>
+            </div>
+
+            <!-- Botón de Envío -->
+            <button type="submit" class="btn-submit">Enviar</button>
+        </form>
+
+        <!-- Sección para alternar vistas -->
+        <div class="form-switch">
+            <p>¿Ya tienes una cuenta? <a href="#">Inicia sesión</a></p>
+        </div>
+    </div>
+    
+</body>
+</html>

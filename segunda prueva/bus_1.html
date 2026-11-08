@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo Bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="bus_1.css">
+  </head>
+  <body>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <div class="container my-5">
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Contenido Principal</h2>
+            <p>Aquí va la sección principal de tu página.</p>
+        </div>
+        <div class="col-md-4">
+            <h3>Barra Lateral</h3>
+            <p>Información complementaria o enlaces.</p>
+        </div>
+    </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">MiProyecto</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+    </nav>
+    <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Título de la Tarjeta</h5>
+    <p class="card-text">Descripción breve del contenido o funcionalidad.</p>
+    <a href="#" class="btn btn-primary">Ver más</a>
+  </div>
+</div>
+    <!-- Botón activador -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#miModal">
+  Abrir ventana modal
+</button>
+
+<!-- Estructura del Modal -->
+<div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="miModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="miModalLabel">Título del Modal</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Contenido principal del mensaje o formulario.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
+<form class="needs-validation" novalidate>
+  <div class="mb-3">
+    <label for="emailInput" class="form-label">Correo Electrónico</label>
+    <input type="email" class="form-control" id="emailInput" placeholder="nombre@ejemplo.com" required>
+    <div class="invalid-feedback">Por favor ingresa un correo válido.</div>
+  </div>
+  
+  <div class="mb-3">
+    <label for="mensajeInput" class="form-label">Mensaje</label>
+    <textarea class="form-control" id="mensajeInput" rows="3" required></textarea>
+  </div>
+  
+  <button type="submit" class="btn btn-success">Enviar</button>
+    </form>
+    <button class="btn btn-primary"><i class="bi bi-person-fill"></i> Perfil</button>
+  </body>
+</html>
+

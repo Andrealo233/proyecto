@@ -1,0 +1,150 @@
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e90cfd, #300d41, #6f3ea1);
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Tarjeta contenedora semitransparente */
+.card-form {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+.card-form h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: #024f4e;
+    text-align: center;
+}
+
+/* Estructura general de cada grupo del formulario */
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+/* Estilos de las etiquetas (Labels) */
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+/* Color personalizado para la etiqueta de correo */
+.email-label {
+    color: #7b23c4;
+}
+
+/* Estilos de los inputs */
+.form-control {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-control:focus {
+    border-color: #024f4e;
+}
+
+/* Texto de ayuda pequeño */
+.form-text {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+/* Acciones adicionales (¿Olvidaste tu contraseña?) */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1.2rem;
+}
+
+.forgot-password {
+    color: #024f4e;
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para la casilla de Términos y Condiciones */
+.form-group-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.form-group-checkbox input[type="checkbox"] {
+    margin-right: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+}
+
+.terms-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.terms-link:hover {
+    text-decoration: underline;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 0.75rem;
+    background: linear-gradient(135deg, #e90cfd, #6f3ea1);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.btn-submit:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* Sección para alternar vistas */
+.form-switch {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.form-switch a {
+    color: #6f3ea1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form-switch a:hover {
+    text-decoration: underline;
+}

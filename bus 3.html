@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1. BOTÓN QUE ACTIVA EL MODAL (Simulando un registro con ID y variables) -->
+<button type="button" class="btn btn-danger btn-sm" 
+        data-bs-toggle="modal" 
+        data-bs-target="#confirmModal" 
+        data-bs-id="1254" 
+        data-bs-nombre="Usuario Juan Pérez">
+    <i class="bi bi-trash"></i> Eliminar Registro
+</button>
+
+<!-- 2. LA VENTANA MODAL (Oculta por defecto) -->
+<div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title" id="confirmModalLabel">Confirmación de Acción</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>¿Estás seguro de realizar esta acción para el elemento con ID: <span id="modalIdText" class="fw-bold text-danger"></span>?</p>
+                <p class="text-muted mb-0" id="modalNombreText"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success">Confirmar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 3. SCRIPT DE JAVASCRIPT PARA PASAR LAS VARIABLES AL MODAL -->
+<script>
+    const confirmModal = document.getElementById('confirmModal');
+    confirmModal.addEventListener('show.bs.modal', function (event) {
+        // Botón que activó el modal
+        const button = event.relatedTarget;
+        
+        // Extraer la información de los atributos data-bs-*
+        const idItem = button.getAttribute('data-bs-id');
+        const nombreItem = button.getAttribute('data-bs-nombre');
+        
+        // Actualizar el contenido del modal con las variables
+        const idSpan = confirmModal.querySelector('#modalIdText');
+        const nombreP = confirmModal.querySelector('#modalNombreText');
+        
+        idSpan.textContent = idItem;
+        nombreP.textContent = nombreItem;
+    });
+</script>
+</body>
+</html>
